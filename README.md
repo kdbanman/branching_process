@@ -2,13 +2,40 @@
 
 Branching process simulations as per Chapter 0 _Probability with Martingales_ by David Williams.
 
+---
+
 Usage examples are available in `examples.py`, which can be run as a demonstration:
 
 ```bash
 $ python examples.py
 ```
 
-Which will have output similar to the following, depending on the randomness of the run.
+Two of those example usages are as follows:
+
+```python
+  # Run default process: Poisson with mean 1.0 children per parent per generation
+  # - for 30 generations
+  # - starting with a population of 100
+  # - plotting the population each time
+  branch.run_generations(
+    initial_population = 50,
+    number_of_generations = 30,
+    sibling_counts_callback = branch.plot_population,
+  )
+
+  # Do the same thing, but for a process with mean 0.96 children per parent
+  generator = branch.poisson_children_generator(mean_children_per_parent = 0.96)
+  branch.run_generations(
+    initial_population = 50,
+    number_of_generations = 30,
+    generate_child_counts = generator,
+    sibling_counts_callback = branch.plot_population,
+  )
+```
+
+Running the examples file will have output similar to the following, depending on the randomness of the run.
+
+> _BEGIN: Output from `$ python examples.py`_
 
 ---
 
@@ -265,3 +292,7 @@ Do the same thing, but with a 0.25 probability of generating 5 children,
 3.32E+03 ***********
 4.26E+03 ************
 ```
+
+---
+
+> _END: Output from `$ python examples.py`_
