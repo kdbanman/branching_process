@@ -4,9 +4,9 @@ import numpy as np
 def print_siblings(sibling_counts):
   rendered_siblings = ""
   for sibling_count in sibling_counts:
-    rendered_siblings += str(sibling_count) * sibling_count + " | "
+    rendered_siblings += "." * sibling_count + " | "
 
-  print(rendered_siblings[:-1])
+  print(rendered_siblings[:-3])
 
 
 def plot_population(sibling_counts):
