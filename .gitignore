@@ -1,3 +1,7 @@
+# Kirby's ignores
+
+# Virtualenv activation shortcut
+activate
 
 # Created by https://www.gitignore.io/api/python,virtualenv
 # Edit at https://www.gitignore.io/?templates=python,virtualenv
