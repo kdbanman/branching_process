@@ -1,6 +1,6 @@
 # Branching Process
 
-Branching process simulations as per Chapter 0 _Probability with Martingales_ by David Williams.
+Branching process simulations as per Chapter 0 of _Probability with Martingales_ by David Williams.
 
 ---
 
