@@ -13,6 +13,8 @@ $ python examples.py
 Two of those example usages are as follows:
 
 ```python
+  import branch
+  
   # Run default process: Poisson with mean 1.0 children per parent per generation
   # - for 30 generations
   # - starting with a population of 100
